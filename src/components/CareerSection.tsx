@@ -73,17 +73,30 @@ const CareerSection = () => {
     }
   ];
 
-  const education: CareerItem = {
-    title: "Bachelor of Science in Business Administration",
-    company: "University of California, Berkeley",
-    location: "Berkeley, CA",
-    period: "Expected Dec 2025",
-    highlights: [
-      "Haas School of Business",
-      "Focus on Finance, Investment, Project Management, AI & Entrepreneurship"
-    ],
-    type: "education"
-  };
+  const educationItems: CareerItem[] = [
+    {
+      title: "Bachelor of Science in Business Administration",
+      company: "University of California, Berkeley",
+      location: "Berkeley, CA",
+      period: "Expected Dec 2025",
+      highlights: [
+        "Haas School of Business",
+        "Focus on Finance, Investment, Project Management, AI & Entrepreneurship"
+      ],
+      type: "education"
+    },
+    {
+      title: "Associate Degrees in Business Administration & Economics",
+      company: "Pasadena City College",
+      location: "Pasadena, CA",
+      period: "2019 - 2020",
+      highlights: [
+        "Dual Associate Degrees",
+        "Foundation in Business & Economic Principles"
+      ],
+      type: "education"
+    }
+  ];
 
   return (
     <section id="career" className="py-24 lg:py-32 bg-secondary/30 relative">
@@ -180,30 +193,34 @@ const CareerSection = () => {
               <h3 className="text-2xl font-display font-bold text-foreground">Education</h3>
             </div>
 
-            <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 max-w-xl">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                <Calendar className="w-4 h-4" />
-                <span>{education.period}</span>
-              </div>
-              <h4 className="text-xl font-display font-bold text-foreground mb-1">
-                {education.title}
-              </h4>
-              <p className="text-primary font-semibold mb-2">{education.company}</p>
-              <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-                <MapPin className="w-3 h-3" />
-                <span>{education.location}</span>
-              </div>
-              <ul className="space-y-2">
-                {education.highlights.map((highlight, index) => (
-                  <li 
-                    key={index}
-                    className="text-sm text-muted-foreground flex items-start gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-6">
+              {educationItems.map((edu, index) => (
+                <div key={index} className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 max-w-xl">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <Calendar className="w-4 h-4" />
+                    <span>{edu.period}</span>
+                  </div>
+                  <h4 className="text-xl font-display font-bold text-foreground mb-1">
+                    {edu.title}
+                  </h4>
+                  <p className="text-primary font-semibold mb-2">{edu.company}</p>
+                  <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
+                    <MapPin className="w-3 h-3" />
+                    <span>{edu.location}</span>
+                  </div>
+                  <ul className="space-y-2">
+                    {edu.highlights.map((highlight, hIndex) => (
+                      <li 
+                        key={hIndex}
+                        className="text-sm text-muted-foreground flex items-start gap-2"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
