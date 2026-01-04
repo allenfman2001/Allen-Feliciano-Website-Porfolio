@@ -44,7 +44,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-accent hover:opacity-90 text-primary-foreground font-display font-semibold px-8 py-6 text-lg shadow-glow transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://www.linkedin.com/in/allenfeliciano/', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/allenfman/', '_blank')}
             >
               <Linkedin className="w-5 h-5 mr-2" />
               Connect on LinkedIn
@@ -67,7 +67,7 @@ const HeroSection = () => {
               <div className="text-sm text-muted-foreground">Company Milestone</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-gradient mb-1">15+</div>
+            <div className="text-3xl md:text-4xl font-display font-bold text-gradient mb-1">5+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
