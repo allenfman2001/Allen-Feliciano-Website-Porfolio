@@ -74,7 +74,7 @@ const CareerSection = () => {
   ];
 
   const education: CareerItem = {
-    title: "BS in Business Administration",
+    title: "Bachelor of Science in Business Administration",
     company: "University of California, Berkeley",
     location: "Berkeley, CA",
     period: "Expected Dec 2025",
