@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import multimedImage from "@/assets/multimed-hero.jpg";
+import multimedImage from "@/assets/multimed-team.png";
 import infinityImage from "@/assets/infinity-hero.jpg";
 
 const ProjectsSection = () => {
