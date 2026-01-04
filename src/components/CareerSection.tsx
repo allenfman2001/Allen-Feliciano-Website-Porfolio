@@ -80,7 +80,7 @@ const CareerSection = () => {
     period: "Expected Dec 2025",
     highlights: [
       "Haas School of Business",
-      "Focus on Technology & Entrepreneurship"
+      "Focus on Finance, Investment, Project Management, AI & Entrepreneurship"
     ],
     type: "education"
   };
