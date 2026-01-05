@@ -185,7 +185,7 @@ const CareerSection = () => {
           </div>
 
           {/* Education Section */}
-          <div className="mt-20 pt-12 border-t border-border">
+          <div id="education" className="mt-20 pt-12 border-t border-border scroll-mt-20">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-primary" />

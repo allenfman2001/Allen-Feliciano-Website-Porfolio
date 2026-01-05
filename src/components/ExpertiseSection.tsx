@@ -42,7 +42,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-secondary/20 relative">
+    <section id="expertise" className="py-24 lg:py-32 bg-secondary/20 relative">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />

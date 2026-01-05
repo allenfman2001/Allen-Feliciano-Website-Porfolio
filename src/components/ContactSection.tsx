@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative">
+    <section id="contact" className="py-24 lg:py-32 bg-background relative">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
