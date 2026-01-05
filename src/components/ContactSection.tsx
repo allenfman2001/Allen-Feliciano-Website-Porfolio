@@ -49,7 +49,7 @@ const ContactSection = () => {
               <Github className="w-6 h-6 text-foreground" />
             </a>
             <a 
-              href="https://www.instagram.com/allenfman/"
+              href="https://www.instagram.com/allenfman/?hl=en"
               target="_blank" 
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
@@ -90,7 +90,7 @@ const ContactSection = () => {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://www.instagram.com/allenfman/" 
+              href="https://www.instagram.com/allenfman/?hl=en" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
