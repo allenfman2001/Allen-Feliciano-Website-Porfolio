@@ -12,7 +12,7 @@ const ProjectsSection = () => {
         "Architected enterprise systems in Indonesia supporting 38-province distribution network and channels",
         "Scaled technology and business infrastructure to serve 100+ million customers",
         "Drove digital transformation enabling IPO readiness",
-        "Built partnerships with global brands from USA and Korea"
+        "Built partnerships with global brands from USA and Korea (Warner Bros., Hybe Entertainment, LINE Corp.)"
       ],
       imageUrl: multimedImage,
       websiteUrl: "https://www.multimed.co.id/en/"
