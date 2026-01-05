@@ -32,7 +32,7 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-slide-up font-display font-medium" style={{
           animationDelay: '0.2s'
         }}>
-            Technology Executive & Entrepreneur
+              ​"Push Beyond the Limit"  
           </p>
 
           {/* Impact statement */}
