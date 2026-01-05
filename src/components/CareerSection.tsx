@@ -9,6 +9,13 @@ interface CareerItem {
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
+    title: "Research Assistant",
+    company: "University of California, Berkeley",
+    location: "Berkeley, CA",
+    period: "Sep 2025 - Present",
+    highlights: ["Laboratory preparation and testing of asphalt and concrete specimens for pavement engineering research", "Operated heavy equipment (saws, mixers, forklifts, coring machines) under strict safety protocols", "Performance data analysis on sustainable materials for Caltrans and FHWA infrastructure projects"],
+    type: "work"
+  }, {
     title: "Project Manager",
     company: "Perplexity.AI",
     location: "San Francisco, CA",
