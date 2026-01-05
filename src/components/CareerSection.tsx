@@ -1,4 +1,6 @@
 import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
+import researchLabImage from "@/assets/research-lab.jpg";
+
 interface CareerItem {
   title: string;
   company: string;
@@ -6,6 +8,7 @@ interface CareerItem {
   period: string;
   highlights: string[];
   type: "work" | "education";
+  image?: string;
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
@@ -14,7 +17,8 @@ const CareerSection = () => {
     location: "Berkeley, CA",
     period: "Sep 2025 - Present",
     highlights: ["Laboratory preparation and testing of asphalt and concrete specimens for pavement engineering research", "Operated heavy equipment (saws, mixers, forklifts, coring machines) under strict safety protocols", "Performance data analysis on sustainable materials for Caltrans and FHWA infrastructure projects"],
-    type: "work"
+    type: "work",
+    image: researchLabImage
   }, {
     title: "Project Manager",
     company: "Perplexity.AI",
@@ -128,8 +132,16 @@ const CareerSection = () => {
                   </div>
                 </div>
 
-                {/* Empty space for alternating layout */}
-                <div className="hidden md:block md:w-[calc(50%-2rem)]" />
+                {/* Empty space for alternating layout - show image if available */}
+                <div className={`hidden md:block md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
+                  {item.image && (
+                    <img 
+                      src={item.image} 
+                      alt={`${item.company} work`}
+                      className="w-full h-48 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300"
+                    />
+                  )}
+                </div>
               </div>)}
           </div>
 
