@@ -1,8 +1,6 @@
-import { Linkedin, Mail, Github, Instagram } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Linkedin, Mail, Github } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   return (
     <section id="contact" className="py-24 lg:py-32 bg-background relative">
       {/* Background decoration */}
@@ -49,15 +47,6 @@ const ContactSection = () => {
             >
               <Github className="w-6 h-6 text-foreground" />
             </a>
-            <button 
-              onClick={() => {
-                navigator.clipboard.writeText("https://www.instagram.com/allenfman/?hl=en");
-                toast({ title: "Link copied!", description: "Instagram link copied to clipboard" });
-              }}
-              className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110 cursor-pointer"
-            >
-              <Instagram className="w-6 h-6 text-foreground" />
-            </button>
           </div>
         </div>
       </div>
@@ -91,15 +80,6 @@ const ContactSection = () => {
             >
               <Github className="w-5 h-5" />
             </a>
-            <button 
-              onClick={() => {
-                navigator.clipboard.writeText("https://www.instagram.com/allenfman/?hl=en");
-                toast({ title: "Link copied!", description: "Instagram link copied to clipboard" });
-              }}
-              className="hover:text-primary transition-colors cursor-pointer"
-            >
-              <Instagram className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
