@@ -116,10 +116,7 @@ const CareerSection = () => {
                     <h3 className="text-xl font-display font-bold text-foreground mb-1">
                       {item.title}
                     </h3>
-                    <div className={`flex items-center gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
-                      {item.logo}
-                      <p className="text-primary font-semibold">{item.company}</p>
-                    </div>
+                    <p className={`text-primary font-semibold ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>{item.company}</p>
                     {/* Location */}
                     <div className={`flex items-center gap-1 text-sm text-muted-foreground mb-4 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                       <MapPin className="w-3 h-3" />
