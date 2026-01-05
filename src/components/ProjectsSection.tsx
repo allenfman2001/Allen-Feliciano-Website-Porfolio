@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       highlights: [
         "Architected enterprise systems in Indonesia supporting 38-province distribution network and channels",
         "Scaled technology and business infrastructure to serve 100+ million customers",
-        "Drove digital transformation enabling IPO readiness",
+        "Drove business transformation enabling IPO readiness in December 2022; Company IPO under 2 years",
         "Built partnerships with global brands from USA and Korea (Warner Bros., Hybe Entertainment, LINE Corp.)"
       ],
       imageUrl: multimedImage,
