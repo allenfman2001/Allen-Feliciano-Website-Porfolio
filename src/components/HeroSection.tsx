@@ -1,4 +1,4 @@
-import { ArrowDown, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { ArrowDown, Linkedin, Mail, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -39,16 +39,34 @@ const HeroSection = () => {
             Now building the future of AI with <span className="text-primary font-semibold">InfinityPilot AI</span>.
           </p>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <Button 
-              size="lg" 
-              className="bg-gradient-accent hover:opacity-90 text-primary-foreground font-display font-semibold px-8 py-6 text-lg shadow-glow transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://www.linkedin.com/in/allenfman/', '_blank')}
-            >
-              <Linkedin className="w-5 h-5 mr-2" />
-              Connect on LinkedIn
-            </Button>
+          {/* Social icons + CTA */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://www.linkedin.com/in/allenfman/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin className="w-6 h-6 text-foreground" />
+              </a>
+              <a 
+                href="mailto:allenfman@berkeley.edu" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <Mail className="w-6 h-6 text-foreground" />
+              </a>
+              <a 
+                href="https://github.com/allenfman2001/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <Github className="w-6 h-6 text-foreground" />
+              </a>
+            </div>
             <Button 
               size="lg" 
               variant="outline"
