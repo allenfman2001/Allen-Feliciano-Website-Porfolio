@@ -64,30 +64,38 @@ const ContactSection = () => {
       <div className="container px-6 mt-24">
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
           <p>© 2025 Allen Feliciano. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <a 
               href="https://www.linkedin.com/in/allenfman/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              LinkedIn
+              <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="https://infinitypilot.ai/" 
+              href="mailto:allenfman@berkeley.edu" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              InfinityPilot
+              <Mail className="w-5 h-5" />
             </a>
             <a 
-              href="https://www.multimed.co.id/en/" 
+              href="https://github.com/allenfman2001/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              Multimed
+              <Github className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://instagram.com/allenfman/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
         </div>
