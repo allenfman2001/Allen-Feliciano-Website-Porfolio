@@ -1,7 +1,6 @@
 import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 import researchLabImage from "@/assets/research-lab.jpg";
 import ucprcLogo from "@/assets/ucprc-logo.png";
-
 interface CareerItem {
   title: string;
   company: string;
@@ -118,13 +117,7 @@ const CareerSection = () => {
                       {item.title}
                     </h3>
                     <div className={`flex items-center gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
-                      {item.logo && (
-                        <img 
-                          src={item.logo} 
-                          alt={`${item.company} logo`}
-                          className="w-8 h-8 object-contain"
-                        />
-                      )}
+                      {item.logo}
                       <p className="text-primary font-semibold">{item.company}</p>
                     </div>
                     {/* Location */}
@@ -145,13 +138,7 @@ const CareerSection = () => {
 
                 {/* Empty space for alternating layout - show image if available */}
                 <div className={`hidden md:block md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  {item.image && (
-                    <img 
-                      src={item.image} 
-                      alt={`${item.company} work`}
-                      className="w-full h-48 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300"
-                    />
-                  )}
+                  {item.image && <img src={item.image} alt={`${item.company} work`} className="w-full h-48 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300" />}
                 </div>
               </div>)}
           </div>
