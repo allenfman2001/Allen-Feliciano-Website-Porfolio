@@ -19,7 +19,7 @@ const ProjectsSection = () => {
     },
     {
       title: "InfinityPilot AI",
-      role: "Founder & CEO",
+      role: "Co-Founder & COO",
       description: "Building the future of conversational AI with human-like voice assistants that revolutionize mass marketing and customer engagement across multiple channels.",
       highlights: [
         "89K+ active users with 90% client satisfaction",
