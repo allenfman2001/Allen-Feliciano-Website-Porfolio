@@ -1,4 +1,4 @@
-import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Linkedin, Mail, Github, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -22,26 +22,40 @@ const ContactSection = () => {
             or want to discuss the future of AI—I'd love to connect.
           </p>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-gradient-accent hover:opacity-90 text-primary-foreground font-display font-semibold px-8 py-6 text-lg shadow-glow transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://www.linkedin.com/in/allenfman/', '_blank')}
+          {/* Social icons */}
+          <div className="flex items-center justify-center gap-6">
+            <a 
+              href="https://www.linkedin.com/in/allenfman/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
             >
-              <Linkedin className="w-5 h-5 mr-2" />
-              Connect on LinkedIn
-              <ArrowUpRight className="w-4 h-4 ml-2" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-border hover:bg-secondary hover:border-primary/50 font-display font-semibold px-8 py-6 text-lg transition-all duration-300"
-              onClick={() => window.open('mailto:allen@infinitypilot.ai', '_blank')}
+              <Linkedin className="w-6 h-6 text-foreground" />
+            </a>
+            <a 
+              href="mailto:allenfman@berkeley.edu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Send Email
-            </Button>
+              <Mail className="w-6 h-6 text-foreground" />
+            </a>
+            <a 
+              href="https://github.com/allenfman2001/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
+            >
+              <Github className="w-6 h-6 text-foreground" />
+            </a>
+            <a 
+              href="https://instagram.com/allenfman/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 rounded-full bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-110"
+            >
+              <Instagram className="w-6 h-6 text-foreground" />
+            </a>
           </div>
         </div>
       </div>
