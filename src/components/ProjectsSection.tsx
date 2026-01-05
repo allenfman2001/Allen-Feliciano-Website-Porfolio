@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       description: "Led the technology transformation of Indonesia's leading medical equipment and consumer healthcare company from early-stage startup to successful public listing on the Indonesia Stock Exchange (IDX: MMIX).",
       highlights: [
         "Architected enterprise systems in Indonesia supporting 38-province distribution network and channels",
-        "Scaled technology infrastructure to serve 10+ million customers",
+        "Scaled technology and business infrastructure to serve 100+ million customers",
         "Drove digital transformation enabling IPO readiness",
         "Built partnerships with global brands from USA and Korea"
       ],
