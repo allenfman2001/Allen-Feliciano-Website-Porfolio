@@ -32,16 +32,11 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-slide-up font-display font-medium" style={{
           animationDelay: '0.2s'
         }}>
-              ​"Push Beyond the Limit"  
+              ​IPO  Healthcare Entrepreneur with PM Experience  
           </p>
 
           {/* Impact statement */}
-          <p className="text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-8 animate-slide-up leading-relaxed" style={{
-          animationDelay: '0.3s'
-        }}>
-            Led technology transformation at <span className="text-primary font-semibold">Multimed</span> from startup to <span className="text-primary font-semibold">IPO</span>. 
-            Now building the future of AI with <span className="text-primary font-semibold">InfinityPilot AI</span>.
-          </p>
+          
 
           {/* Social icons + CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-slide-up" style={{
@@ -72,7 +67,7 @@ const HeroSection = () => {
         }}>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-display font-bold text-gradient mb-1">IPO</div>
-              <div className="text-sm text-muted-foreground">Company Milestone</div>
+              <div className="text-sm text-muted-foreground">Top Milestone</div>
             </div>
             <div className="text-center">
             <div className="text-3xl md:text-4xl font-display font-bold text-gradient mb-1">5+</div>
