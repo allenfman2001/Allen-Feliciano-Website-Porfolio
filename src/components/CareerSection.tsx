@@ -1,5 +1,6 @@
 import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 import researchLabImage from "@/assets/research-lab.jpg";
+import ucprcLogo from "@/assets/ucprc-logo.png";
 
 interface CareerItem {
   title: string;
@@ -9,16 +10,18 @@ interface CareerItem {
   highlights: string[];
   type: "work" | "education";
   image?: string;
+  logo?: string;
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
     title: "Research Assistant",
-    company: "University of California, Berkeley",
+    company: "UC Pavement Research Center",
     location: "Berkeley, CA",
     period: "Sep 2025 - Present",
     highlights: ["Laboratory preparation and testing of asphalt and concrete specimens for pavement engineering research", "Operated heavy equipment (saws, mixers, forklifts, coring machines) under strict safety protocols", "Performance data analysis on sustainable materials for Caltrans and FHWA infrastructure projects"],
     type: "work",
-    image: researchLabImage
+    image: researchLabImage,
+    logo: ucprcLogo
   }, {
     title: "Project Manager",
     company: "Perplexity.AI",
@@ -114,8 +117,16 @@ const CareerSection = () => {
                     <h3 className="text-xl font-display font-bold text-foreground mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-primary font-semibold mb-2">{item.company}</p>
-                    
+                    <div className={`flex items-center gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                      {item.logo && (
+                        <img 
+                          src={item.logo} 
+                          alt={`${item.company} logo`}
+                          className="w-8 h-8 object-contain"
+                        />
+                      )}
+                      <p className="text-primary font-semibold">{item.company}</p>
+                    </div>
                     {/* Location */}
                     <div className={`flex items-center gap-1 text-sm text-muted-foreground mb-4 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                       <MapPin className="w-3 h-3" />
