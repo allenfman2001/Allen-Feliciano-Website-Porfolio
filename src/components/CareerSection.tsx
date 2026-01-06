@@ -4,6 +4,8 @@ import ucprcLogo from "@/assets/ucprc-logo.png";
 import perplexityCometImage from "@/assets/perplexity-comet.jpg";
 import adobeEventImage from "@/assets/adobe-event.jpg";
 import adobeExpressImage from "@/assets/adobe-express.jpg";
+import lucasfilmLogo from "@/assets/lucasfilm-logo.jpg";
+import ilmLogo from "@/assets/ilm-logo.png";
 interface CareerItem {
   title: string;
   company: string;
@@ -47,7 +49,8 @@ const CareerSection = () => {
     location: "San Francisco, CA",
     period: "Aug 2023 - June 2024",
     highlights: ["$7.5M+ ROI through cost-benefit analyses", "50% bottleneck reduction in production workflows", "96% on-time delivery rate for VFX projects"],
-    type: "work"
+    type: "work",
+    images: [lucasfilmLogo, ilmLogo]
   }, {
     title: "Business Analyst",
     company: "Warner Bros Studios",
