@@ -1,6 +1,7 @@
 import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 import researchLabImage from "@/assets/research-lab.jpg";
 import ucprcLogo from "@/assets/ucprc-logo.png";
+import perplexityCometImage from "@/assets/perplexity-comet.jpg";
 interface CareerItem {
   title: string;
   company: string;
@@ -27,7 +28,8 @@ const CareerSection = () => {
     location: "San Francisco, CA",
     period: "Aug 2025 - Present",
     highlights: ["Managing Comet AI browser launch with 9,000+ ambassadors worldwide", "45% engagement boost through strategic initiative planning", "60% reduction in reporting time via automated systems"],
-    type: "work"
+    type: "work",
+    image: perplexityCometImage
   }, {
     title: "Product Manager",
     company: "Adobe Inc",
