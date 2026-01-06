@@ -10,6 +10,7 @@ interface ProjectCardProps {
   websiteUrl: string;
   accentColor?: string;
   isReversed?: boolean;
+  imageStyle?: "cover" | "contain";
 }
 
 const ProjectCard = ({ 
@@ -19,7 +20,8 @@ const ProjectCard = ({
   highlights, 
   imageUrl, 
   websiteUrl,
-  isReversed = false 
+  isReversed = false,
+  imageStyle = "cover"
 }: ProjectCardProps) => {
   return (
     <div className={`grid md:grid-cols-2 gap-8 lg:gap-16 items-center ${isReversed ? 'md:flex-row-reverse' : ''}`}>
@@ -63,7 +65,11 @@ const ProjectCard = ({
           <img 
             src={imageUrl} 
             alt={title}
-            className="w-full aspect-video object-contain bg-card transition-transform duration-500 group-hover:scale-105 scale-75"
+            className={`w-full aspect-video transition-transform duration-500 group-hover:scale-105 ${
+              imageStyle === "contain" 
+                ? "object-contain bg-card scale-75" 
+                : "object-cover"
+            }`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

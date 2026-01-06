@@ -15,7 +15,8 @@ const ProjectsSection = () => {
         "Built partnerships with global brands from USA and Korea (Warner Bros., Hybe Entertainment, LINE Corp.)"
       ],
       imageUrl: multimedImage,
-      websiteUrl: "https://www.multimed.co.id/en/"
+      websiteUrl: "https://www.multimed.co.id/en/",
+      imageStyle: "cover" as const
     },
     {
       title: "InfinityPilot AI",
@@ -28,7 +29,8 @@ const ProjectsSection = () => {
         "Proprietary Speech-to-Meaning® and Deep Meaning Understanding® technology"
       ],
       imageUrl: infinityImage,
-      websiteUrl: "https://infinitypilot.ai/"
+      websiteUrl: "https://infinitypilot.ai/",
+      imageStyle: "contain" as const
     }
   ];
 
