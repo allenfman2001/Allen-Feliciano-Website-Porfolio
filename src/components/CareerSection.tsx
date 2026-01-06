@@ -101,7 +101,7 @@ const CareerSection = () => {
 
           {/* Career items */}
           <div className="space-y-12 shadow-none">
-            {careerItems.map((item, index) => <div key={`${item.company}-${index}`} className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+            {careerItems.map((item, index) => <div key={`${item.company}-${index}`} className={`relative flex flex-col md:flex-row md:items-stretch gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Timeline dot */}
                 <div className="absolute left-8 md:left-1/2 w-4 h-4 -translate-x-1/2 rounded-full bg-primary border-4 border-background shadow-glow z-10" />
 
@@ -136,9 +136,9 @@ const CareerSection = () => {
                 </div>
 
                 {/* Empty space for alternating layout - show image if available */}
-                <div className={`hidden md:flex md:flex-col md:gap-4 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className="w-full h-48 object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300" />}
-                  {item.image && <img src={item.image} alt={`${item.company} work`} className="w-full h-48 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300" />}
+                <div className={`hidden md:flex md:flex-col md:gap-4 md:w-[calc(50%-2rem)] h-full ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
+                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className="w-full flex-1 object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300" />}
+                  {item.image && <img src={item.image} alt={`${item.company} work`} className="w-full flex-1 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300" />}
                 </div>
               </div>)}
           </div>
