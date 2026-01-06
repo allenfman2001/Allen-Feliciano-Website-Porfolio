@@ -38,7 +38,7 @@ const CareerSection = () => {
     company: "Adobe Inc",
     location: "San Jose, CA",
     period: "Aug 2024 - June 2025",
-    highlights: ["200% user retention increase for Adobe Express Mobile App", "65% install growth through strategic product improvements", "UI/UX redesign based on 300+ user surveys"],
+    highlights: ["200% user retention increase for Adobe Express Mobile App", "65% install growth through strategic product improvements", "Pilot UI/UX design for Adobe Express and Adobe Project based on 300+ user surveys and A/B testings"],
     type: "work",
     images: [adobeEventImage, adobeExpressImage]
   }, {
