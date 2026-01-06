@@ -136,9 +136,9 @@ const CareerSection = () => {
                 </div>
 
                 {/* Empty space for alternating layout - show image if available */}
-                <div className={`hidden md:flex md:flex-col md:gap-4 md:w-[calc(50%-2rem)] h-full ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className="w-full flex-1 object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300" />}
-                  {item.image && <img src={item.image} alt={`${item.company} work`} className="w-full flex-1 object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300" />}
+                <div className={`hidden md:flex md:flex-col md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} ${item.logo && item.image ? 'md:gap-4' : ''}`}>
+                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image ? 'h-48' : 'h-full'}`} />}
+                  {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.logo ? 'flex-1' : 'h-full'}`} />}
                 </div>
               </div>)}
           </div>
