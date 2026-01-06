@@ -11,6 +11,7 @@ interface CareerItem {
   type: "work" | "education";
   image?: string;
   logo?: string;
+  imageStyle?: "cover" | "contain";
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
@@ -29,7 +30,8 @@ const CareerSection = () => {
     period: "Aug 2025 - Present",
     highlights: ["Managing Comet AI browser launch with 9,000+ ambassadors worldwide", "45% engagement boost through strategic initiative planning", "60% reduction in reporting time via automated systems"],
     type: "work",
-    image: perplexityCometImage
+    image: perplexityCometImage,
+    imageStyle: "contain"
   }, {
     title: "Product Manager",
     company: "Adobe Inc",
@@ -138,7 +140,7 @@ const CareerSection = () => {
                 {/* Empty space for alternating layout - show image if available */}
                 <div className={`hidden md:flex md:flex-col md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} ${item.logo && item.image ? 'md:gap-4' : ''}`}>
                   {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image ? 'h-48' : 'h-full'}`} />}
-                  {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.logo ? 'flex-1' : 'h-full'}`} />}
+                  {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.logo ? 'flex-1' : 'h-full'} ${item.imageStyle === 'contain' ? 'object-contain bg-card scale-75' : 'object-cover'}`} />}
                 </div>
               </div>)}
           </div>
