@@ -6,6 +6,8 @@ import adobeEventImage from "@/assets/adobe-event.jpg";
 import adobeExpressImage from "@/assets/adobe-express.jpg";
 import lucasfilmLogo from "@/assets/lucasfilm-logo.jpg";
 import ilmLogo from "@/assets/ilm-logo.png";
+import warnerBrosTeam from "@/assets/warner-bros-team.jpg";
+import warnerBrosLogo from "@/assets/warner-bros-logo.jpg";
 interface CareerItem {
   title: string;
   company: string;
@@ -57,7 +59,8 @@ const CareerSection = () => {
     location: "Burbank, CA",
     period: "May 2023 - Aug 2023",
     highlights: ["3x ROI investment models for studio productions", "$250K budget reallocation optimizing VFX spending", "Cross-functional collaboration with production teams"],
-    type: "work"
+    type: "work",
+    images: [warnerBrosLogo, warnerBrosTeam]
   }, {
     title: "Co-Founder & Executive",
     company: "PT MultiMedika International, Tbk",
