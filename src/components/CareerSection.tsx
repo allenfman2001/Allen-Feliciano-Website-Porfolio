@@ -38,7 +38,7 @@ const CareerSection = () => {
     company: "Adobe Inc",
     location: "San Jose, CA",
     period: "Aug 2024 - June 2025",
-    highlights: ["32% user retention increase for Adobe Acrobat Reader", "65% install growth through strategic product improvements", "UI/UX redesign based on 300+ user surveys"],
+    highlights: ["200% user retention increase for Adobe Express Mobile App", "65% install growth through strategic product improvements", "UI/UX redesign based on 300+ user surveys"],
     type: "work",
     images: [adobeEventImage, adobeExpressImage]
   }, {
