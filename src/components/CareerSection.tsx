@@ -2,6 +2,8 @@ import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 import researchLabImage from "@/assets/research-lab.jpg";
 import ucprcLogo from "@/assets/ucprc-logo.png";
 import perplexityCometImage from "@/assets/perplexity-comet.jpg";
+import adobeEventImage from "@/assets/adobe-event.jpg";
+import adobeExpressImage from "@/assets/adobe-express.jpg";
 interface CareerItem {
   title: string;
   company: string;
@@ -10,6 +12,7 @@ interface CareerItem {
   highlights: string[];
   type: "work" | "education";
   image?: string;
+  images?: string[];
   logo?: string;
 }
 const CareerSection = () => {
@@ -36,7 +39,8 @@ const CareerSection = () => {
     location: "San Jose, CA",
     period: "Aug 2024 - June 2025",
     highlights: ["32% user retention increase for Adobe Acrobat Reader", "65% install growth through strategic product improvements", "UI/UX redesign based on 300+ user surveys"],
-    type: "work"
+    type: "work",
+    images: [adobeEventImage, adobeExpressImage]
   }, {
     title: "Associate Project Manager",
     company: "Lucasfilm Ltd (Industrial Light & Magic)",
@@ -136,9 +140,12 @@ const CareerSection = () => {
                 </div>
 
                 {/* Empty space for alternating layout - show image if available */}
-                <div className={`hidden md:flex md:flex-col md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} ${item.logo && item.image ? 'md:gap-4' : ''}`}>
-                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image ? 'h-48' : 'h-full'}`} />}
+                <div className={`hidden md:flex md:flex-col md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} ${item.logo || item.image || item.images ? 'md:gap-4' : ''}`}>
+                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image || item.images ? 'h-48' : 'h-full'}`} />}
                   {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.logo ? 'h-48' : 'h-full'}`} />}
+                  {item.images && item.images.map((img, imgIndex) => (
+                    <img key={imgIndex} src={img} alt={`${item.company} work ${imgIndex + 1}`} className="w-full h-48 object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300" />
+                  ))}
                 </div>
               </div>)}
           </div>
