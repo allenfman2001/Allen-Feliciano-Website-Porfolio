@@ -12,6 +12,7 @@ const Navbar = () => {
     { label: "Career Timeline", href: "#career" },
     { label: "Education", href: "#education" },
     { label: "Core Competencies", href: "#expertise" },
+    { label: "Film Projects", href: "#films" },
     { label: "Get In Touch", href: "#contact" },
   ];
 
