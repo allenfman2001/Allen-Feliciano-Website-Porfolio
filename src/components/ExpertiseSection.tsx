@@ -18,19 +18,19 @@ const ExpertiseSection = () => {
       icon: Users,
       title: "Team Building",
       description:
-        "Building and leading high-performance engineers and professionals cross-functionally across multiple countries and time zone.",
+        "Building and mentoring high-performance engineering teams across multiple countries and time zones.",
     },
     {
       icon: Globe,
       title: "Global Operations",
       description:
-        "Experience scaling IPO level operations nation-wide and internationally in both Western and Asian Martkets.",
+        "Experience scaling operations across 38+ provinces with international partnerships in USA and Korea.",
     },
     {
       icon: Lightbulb,
       title: "AI Innovation",
       description:
-        "Pioneering AI/ML innovation and built a conversational AI with proprietary Speech-to-Meaning® and Deep Meaning Understanding® technology.",
+        "Pioneering conversational AI with proprietary Speech-to-Meaning® and Deep Meaning Understanding® technology.",
     },
     {
       icon: Shield,
@@ -57,8 +57,8 @@ const ExpertiseSection = () => {
             <span className="text-gradient"> Drives Results</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Combining deep technical expertise with strategic business acumen to build and scale successful technology
-            companies.
+            I will bring my technical expertise with strategic business acumen to build and scale a successful project
+            and technology.
           </p>
         </div>
 
