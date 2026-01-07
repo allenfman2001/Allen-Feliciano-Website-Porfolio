@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import multimedImage from "@/assets/multimed-team.png";
-import infinityImage from "@/assets/infinity-logo.png";
+import infinityImage from "@/assets/infinity-pilot-logo.png";
 
 const ProjectsSection = () => {
   const projects = [
