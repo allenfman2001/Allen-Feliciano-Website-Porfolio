@@ -27,6 +27,7 @@ interface CareerItem {
   images?: string[];
   logo?: string;
   link?: string;
+  imageLinks?: (string | null)[];
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
@@ -64,7 +65,8 @@ const CareerSection = () => {
     period: "Aug 2023 - June 2024",
     highlights: ["$7.5M+ ROI through cost-benefit analyses", "50% bottleneck reduction in production workflows", "96% on-time delivery rate for VFX projects"],
     type: "work",
-    images: [lucasfilmLogo, ilmLogo]
+    images: [lucasfilmLogo, ilmLogo],
+    imageLinks: ["https://www.lucasfilm.com/", null]
   }, {
     title: "Business Analyst",
     company: "Warner Bros Studios",
@@ -196,17 +198,18 @@ const CareerSection = () => {
                       <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 ${item.logo ? 'h-48' : 'h-full'}`} />
                     )
                   )}
-                  {item.images && item.images.map((img, imgIndex) => (
-                    item.link ? (
-                      <a key={imgIndex} href={item.link} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-2xl group">
+                  {item.images && item.images.map((img, imgIndex) => {
+                    const imageLink = item.imageLinks?.[imgIndex] ?? item.link;
+                    return imageLink ? (
+                      <a key={imgIndex} href={imageLink} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-2xl group">
                         <img src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 group-hover:scale-105 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) || item.company === "Warner Bros Studios" || item.company === "PT MultiMedika International, Tbk" || (item.company === "Wander Social" && imgIndex === 1) ? "object-cover" : "object-contain bg-card p-2"} ${item.company === "Wander Social" && imgIndex === 1 ? "object-bottom" : "object-center"}`} />
                       </a>
                     ) : (
                       <div key={imgIndex} className="overflow-hidden rounded-2xl">
                         <img src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) || item.company === "Warner Bros Studios" || item.company === "PT MultiMedika International, Tbk" || (item.company === "Wander Social" && imgIndex === 1) ? "object-cover" : "object-contain bg-card p-2"} ${item.company === "Wander Social" && imgIndex === 1 ? "object-bottom" : "object-center"}`} />
                       </div>
-                    )
-                  ))}
+                    );
+                  })}
                 </div>
               </div>)}
           </div>
