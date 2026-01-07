@@ -74,7 +74,8 @@ const CareerSection = () => {
     period: "May 2023 - Aug 2023",
     highlights: ["3x ROI investment models for studio productions", "$250K budget reallocation optimizing VFX spending", "Cross-functional collaboration with production teams"],
     type: "work",
-    images: [warnerBrosLogo, warnerBrosTeam]
+    images: [warnerBrosLogo, warnerBrosTeam],
+    link: "https://www.wbd.com/"
   }, {
     title: "Product Manager Intern",
     company: "Wander Social",
