@@ -1,6 +1,9 @@
+import { forwardRef } from "react";
 import { Linkedin, Mail, Github } from "lucide-react";
-const ContactSection = () => {
-  return <section id="contact" className="py-24 lg:py-32 bg-background relative">
+
+const ContactSection = forwardRef<HTMLElement>((_, ref) => {
+  return (
+    <section ref={ref} id="contact" className="py-24 lg:py-32 bg-background relative">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
@@ -14,7 +17,9 @@ const ContactSection = () => {
             Let's Build Something
             <span className="text-gradient"> Extraordinary</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl mx-auto">Whether you're looking for a technology partner, seeking investment opportunities, or want to discuss the future of AI. I'd love to connect.</p>
+          <p className="text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl mx-auto">
+            Whether you're looking for a technology partner, seeking investment opportunities, or want to discuss the future of AI. I'd love to connect.
+          </p>
 
           {/* Social icons */}
           <div className="flex items-center justify-center gap-6">
@@ -48,6 +53,10 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
-};
+    </section>
+  );
+});
+
+ContactSection.displayName = "ContactSection";
+
 export default ContactSection;
