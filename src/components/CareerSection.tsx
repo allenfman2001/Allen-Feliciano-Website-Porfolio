@@ -46,7 +46,8 @@ const CareerSection = () => {
     period: "Aug 2025 - Present",
     highlights: ["Managing Comet AI browser launch with 9,000+ ambassadors worldwide", "45% engagement boost through strategic initiative planning", "60% reduction in reporting time via automated systems"],
     type: "work",
-    image: perplexityCometImage
+    image: perplexityCometImage,
+    link: "https://www.perplexity.ai/comet"
   }, {
     title: "Product Manager",
     company: "Adobe Inc",
