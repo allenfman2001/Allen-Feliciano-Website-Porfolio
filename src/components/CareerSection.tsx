@@ -195,7 +195,7 @@ const CareerSection = () => {
                     </ul>
                   </div>
                   {edu.logo && (
-                    <div className="hidden md:flex w-32 h-32 flex-shrink-0">
+                    <div className="hidden md:flex w-48 h-48 flex-shrink-0">
                       <img src={edu.logo} alt={`${edu.company} logo`} className="w-full h-full object-contain" />
                     </div>
                   )}
