@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       ],
       imageUrl: infinityImage,
       websiteUrl: "https://infinitypilot.ai/",
-      imageStyle: "contain" as const
+      imageStyle: "cover" as const
     }
   ];
 
