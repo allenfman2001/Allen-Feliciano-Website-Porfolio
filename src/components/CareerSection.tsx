@@ -12,6 +12,8 @@ import multimedIpo from "@/assets/multimed-ipo.jpeg";
 import multimedGopublic from "@/assets/multimed-gopublic.jpeg";
 import ucberkeleySeal from "@/assets/ucberkeley-seal.png";
 import pccLogo from "@/assets/pcc-logo.png";
+import wanderSocialApp from "@/assets/wander-social-app.png";
+import wanderSocialLogo from "@/assets/wander-social-logo.jpeg";
 interface CareerItem {
   title: string;
   company: string;
@@ -71,7 +73,8 @@ const CareerSection = () => {
     location: "San Francisco, CA (Remote)",
     period: "Jun 2022 - May 2023",
     highlights: ["Market Research & Trend Analysis for product strategy", "Product Development lifecycle management", "Cross-functional collaboration on product roadmap"],
-    type: "work"
+    type: "work",
+    images: [wanderSocialLogo, wanderSocialApp]
   }, {
     title: "Co-Founder & Executive",
     company: "PT MultiMedika International, Tbk",
