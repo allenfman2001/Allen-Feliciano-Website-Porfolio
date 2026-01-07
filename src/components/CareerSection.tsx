@@ -150,7 +150,7 @@ const CareerSection = () => {
                   {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image || item.images ? 'h-48' : 'h-full'}`} />}
                   {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full object-contain object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 bg-card p-2 ${item.logo ? 'h-48' : 'h-full'}`} />}
                   {item.images && item.images.map((img, imgIndex) => (
-                    <img key={imgIndex} src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) ? "object-cover" : "object-contain bg-card p-2"}`} />
+                    <img key={imgIndex} src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) || (item.company === "Warner Bros Studios" && imgIndex === 1) ? "object-cover" : "object-contain bg-card p-2"}`} />
                   ))}
                 </div>
               </div>)}
