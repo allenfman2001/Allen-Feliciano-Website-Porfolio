@@ -10,6 +10,8 @@ import warnerBrosTeam from "@/assets/warner-bros-team.jpg";
 import warnerBrosLogo from "@/assets/warner-bros-logo.jpg";
 import multimedIpo from "@/assets/multimed-ipo.jpeg";
 import multimedGopublic from "@/assets/multimed-gopublic.jpeg";
+import ucberkeleySeal from "@/assets/ucberkeley-seal.png";
+import pccLogo from "@/assets/pcc-logo.png";
 interface CareerItem {
   title: string;
   company: string;
@@ -78,14 +80,16 @@ const CareerSection = () => {
     location: "Berkeley, CA",
     period: "Expected Dec 2025",
     highlights: ["Haas School of Business", "Focus on Finance, Investment, Project Management, AI & Entrepreneurship"],
-    type: "education"
+    type: "education",
+    logo: ucberkeleySeal
   }, {
     title: "Associate Degrees in Business Administration & Economics",
     company: "Pasadena City College",
     location: "Pasadena, CA",
     period: "2019 - 2020",
     highlights: ["Dual Associate Degrees", "Foundation in Business & Economic Principles"],
-    type: "education"
+    type: "education",
+    logo: pccLogo
   }];
   return <section id="career" className="py-24 lg:py-32 bg-secondary/30 relative">
       {/* Background decoration */}
@@ -169,25 +173,32 @@ const CareerSection = () => {
             </div>
 
             <div className="space-y-6">
-              {educationItems.map((edu, index) => <div key={index} className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 max-w-xl">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <Calendar className="w-4 h-4" />
-                    <span>{edu.period}</span>
+              {educationItems.map((edu, index) => <div key={index} className="flex gap-6 items-center">
+                  <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 flex-1 max-w-xl">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>{edu.period}</span>
+                    </div>
+                    <h4 className="text-xl font-display font-bold text-foreground mb-1">
+                      {edu.title}
+                    </h4>
+                    <p className="text-primary font-semibold mb-2">{edu.company}</p>
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
+                      <MapPin className="w-3 h-3" />
+                      <span>{edu.location}</span>
+                    </div>
+                    <ul className="space-y-2">
+                      {edu.highlights.map((highlight, hIndex) => <li key={hIndex} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                          <span>{highlight}</span>
+                        </li>)}
+                    </ul>
                   </div>
-                  <h4 className="text-xl font-display font-bold text-foreground mb-1">
-                    {edu.title}
-                  </h4>
-                  <p className="text-primary font-semibold mb-2">{edu.company}</p>
-                  <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-                    <MapPin className="w-3 h-3" />
-                    <span>{edu.location}</span>
-                  </div>
-                  <ul className="space-y-2">
-                    {edu.highlights.map((highlight, hIndex) => <li key={hIndex} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                        <span>{highlight}</span>
-                      </li>)}
-                  </ul>
+                  {edu.logo && (
+                    <div className="hidden md:flex w-32 h-32 flex-shrink-0">
+                      <img src={edu.logo} alt={`${edu.company} logo`} className="w-full h-full object-contain" />
+                    </div>
+                  )}
                 </div>)}
             </div>
           </div>
