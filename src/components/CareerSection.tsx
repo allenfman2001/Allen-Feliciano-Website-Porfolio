@@ -26,6 +26,7 @@ interface CareerItem {
   image?: string;
   images?: string[];
   logo?: string;
+  link?: string;
 }
 const CareerSection = () => {
   const careerItems: CareerItem[] = [{
@@ -36,7 +37,8 @@ const CareerSection = () => {
     highlights: ["Laboratory preparation and testing of asphalt and concrete specimens for pavement engineering research", "Operated heavy equipment (saws, mixers, forklifts, coring machines) under strict safety protocols", "Performance data analysis on sustainable materials for Caltrans and FHWA infrastructure projects"],
     type: "work",
     image: researchLabImage,
-    logo: ucprcLogo
+    logo: ucprcLogo,
+    link: "https://ucprc.ucdavis.edu/"
   }, {
     title: "Project Manager",
     company: "Perplexity.AI",
@@ -174,10 +176,28 @@ const CareerSection = () => {
 
                 {/* Empty space for alternating layout - show image if available */}
                 <div className={`hidden md:flex md:flex-col md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} ${item.logo || item.image || item.images ? 'md:gap-4' : ''}`}>
-                  {item.logo && <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 ${item.image || item.images ? 'h-48' : 'h-full'}`} />}
-                  {item.image && <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.logo ? 'h-48' : 'h-full'}`} />}
+                  {item.logo && (
+                    item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="group overflow-hidden rounded-2xl">
+                        <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 group-hover:scale-105 ${item.image || item.images ? 'h-48' : 'h-full'}`} />
+                      </a>
+                    ) : (
+                      <img src={item.logo} alt={`${item.company} logo`} className={`w-full object-contain rounded-2xl border border-border bg-white p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 ${item.image || item.images ? 'h-48' : 'h-full'}`} />
+                    )
+                  )}
+                  {item.image && (
+                    item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="group overflow-hidden rounded-2xl">
+                        <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 group-hover:scale-105 ${item.logo ? 'h-48' : 'h-full'}`} />
+                      </a>
+                    ) : (
+                      <img src={item.image} alt={`${item.company} work`} className={`w-full object-cover object-center rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 ${item.logo ? 'h-48' : 'h-full'}`} />
+                    )
+                  )}
                   {item.images && item.images.map((img, imgIndex) => (
-                    <img key={imgIndex} src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) || item.company === "Warner Bros Studios" || item.company === "PT MultiMedika International, Tbk" || (item.company === "Wander Social" && imgIndex === 1) ? "object-cover" : "object-contain bg-card p-2"} ${item.company === "Wander Social" && imgIndex === 1 ? "object-bottom" : "object-center"}`} />
+                    <div key={imgIndex} className="overflow-hidden rounded-2xl">
+                      <img src={img} alt={`${item.company} work ${imgIndex + 1}`} className={`w-full h-48 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 ${item.company === "Adobe Inc" || (item.company === "Lucasfilm Ltd (Industrial Light & Magic)" && imgIndex === 0) || item.company === "Warner Bros Studios" || item.company === "PT MultiMedika International, Tbk" || (item.company === "Wander Social" && imgIndex === 1) ? "object-cover" : "object-contain bg-card p-2"} ${item.company === "Wander Social" && imgIndex === 1 ? "object-bottom" : "object-center"}`} />
+                    </div>
                   ))}
                 </div>
               </div>)}
