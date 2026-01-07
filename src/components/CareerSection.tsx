@@ -92,7 +92,8 @@ const CareerSection = () => {
     period: "Feb 2020 - Dec 2022",
     highlights: ["Raised $7.4M and led company to successful IPO (IDX: MMIX)", "40,000+ retail store placements across Indonesia", "Built top 5 consumer healthcare brand nationwide"],
     type: "work",
-    images: [multimedIpo, multimedGopublic]
+    images: [multimedIpo, multimedGopublic],
+    link: "https://www.multimed.co.id/en/#"
   }, {
     title: "Database Administrator",
     company: "Consulate General of the Republic of Indonesia in Los Angeles",
