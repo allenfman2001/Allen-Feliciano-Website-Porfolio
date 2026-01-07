@@ -78,7 +78,7 @@ const CareerSection = () => {
     title: "Bachelor of Science in Business Administration",
     company: "University of California, Berkeley",
     location: "Berkeley, CA",
-    period: "Expected Dec 2025",
+    period: "Graduated: December 2025",
     highlights: ["Haas School of Business", "Focus on Finance, Investment, Project Management, AI & Entrepreneurship"],
     type: "education",
     logo: ucberkeleySeal
