@@ -66,7 +66,7 @@ const CareerSection = () => {
     highlights: ["$7.5M+ ROI through cost-benefit analyses", "50% bottleneck reduction in production workflows", "96% on-time delivery rate for VFX projects"],
     type: "work",
     images: [lucasfilmLogo, ilmLogo],
-    imageLinks: ["https://www.lucasfilm.com/", null]
+    imageLinks: ["https://www.lucasfilm.com/", "https://www.ilm.com/"]
   }, {
     title: "Business Analyst",
     company: "Warner Bros Studios",
