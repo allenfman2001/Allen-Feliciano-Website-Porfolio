@@ -101,7 +101,8 @@ const CareerSection = () => {
     period: "Nov 2020 - Jan 2021",
     highlights: ["Managed databases of 500,000+ Indonesian citizens on the US West Coast (including Hawaii and Guam)", "Recovered 80% of data loss spanning 40+ years of citizen records", "Launched Electronic Indonesian ID campaign achieving 90% conversion rate in under 3 weeks"],
     type: "work",
-    images: [consulateLogo, consulateEvent]
+    images: [consulateLogo, consulateEvent],
+    link: "https://kemlu.go.id/losangeles"
   }];
   const educationItems: CareerItem[] = [{
     title: "Bachelor of Science in Business Administration",
