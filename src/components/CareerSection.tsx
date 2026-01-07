@@ -8,6 +8,8 @@ import lucasfilmLogo from "@/assets/lucasfilm-logo.jpg";
 import ilmLogo from "@/assets/ilm-logo.png";
 import warnerBrosTeam from "@/assets/warner-bros-team.jpg";
 import warnerBrosLogo from "@/assets/warner-bros-logo.jpg";
+import multimedIpo from "@/assets/multimed-ipo.jpeg";
+import multimedGopublic from "@/assets/multimed-gopublic.jpeg";
 interface CareerItem {
   title: string;
   company: string;
@@ -67,7 +69,8 @@ const CareerSection = () => {
     location: "Jakarta, Indonesia",
     period: "Feb 2020 - Dec 2022",
     highlights: ["Raised $7.4M and led company to successful IPO (IDX: MMIX)", "40,000+ retail store placements across Indonesia", "Built top 5 consumer healthcare brand nationwide"],
-    type: "work"
+    type: "work",
+    images: [multimedIpo, multimedGopublic]
   }];
   const educationItems: CareerItem[] = [{
     title: "Bachelor of Science in Business Administration",
