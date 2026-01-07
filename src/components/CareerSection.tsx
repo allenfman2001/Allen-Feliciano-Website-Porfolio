@@ -83,7 +83,8 @@ const CareerSection = () => {
     period: "Jun 2022 - May 2023",
     highlights: ["Market Research & Trend Analysis for product strategy", "Product Development lifecycle management", "Cross-functional collaboration on product roadmap"],
     type: "work",
-    images: [wanderSocialLogo, wanderSocialApp]
+    images: [wanderSocialLogo, wanderSocialApp],
+    link: "https://wander.one/"
   }, {
     title: "Co-Founder & Executive",
     company: "PT MultiMedika International, Tbk",
