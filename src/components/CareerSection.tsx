@@ -14,6 +14,8 @@ import ucberkeleySeal from "@/assets/ucberkeley-seal.png";
 import pccLogo from "@/assets/pcc-logo.png";
 import wanderSocialApp from "@/assets/wander-social-app.png";
 import wanderSocialLogo from "@/assets/wander-social-logo.jpeg";
+import consulateEvent from "@/assets/consulate-event.jpg";
+import consulateLogo from "@/assets/consulate-logo.jpeg";
 interface CareerItem {
   title: string;
   company: string;
@@ -89,7 +91,8 @@ const CareerSection = () => {
     location: "Los Angeles, CA (Hybrid)",
     period: "Nov 2020 - Jan 2021",
     highlights: ["Managed databases of 500,000+ Indonesian citizens on the US West Coast (including Hawaii and Guam)", "Recovered 80% of data loss spanning 40+ years of citizen records", "Launched Electronic Indonesian ID campaign achieving 90% conversion rate in under 3 weeks"],
-    type: "work"
+    type: "work",
+    images: [consulateLogo, consulateEvent]
   }];
   const educationItems: CareerItem[] = [{
     title: "Bachelor of Science in Business Administration",
