@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import { Film, ExternalLink } from "lucide-react";
 
 interface FilmItem {
@@ -17,9 +16,9 @@ const films: FilmItem[] = [{
   link: "https://drive.google.com/file/d/1DrUIOb2TmXD9X8X_kCXtemimTs_d4QOv/view?usp=sharing"
 }];
 
-const FilmsSection = forwardRef<HTMLElement>((_, ref) => {
+const FilmsSection = () => {
   return (
-    <section ref={ref} id="films" className="py-20 md:py-32 bg-secondary/30">
+    <section id="films" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           <span className="text-primary">​Film Projects</span>
@@ -50,8 +49,6 @@ const FilmsSection = forwardRef<HTMLElement>((_, ref) => {
       </div>
     </section>
   );
-});
-
-FilmsSection.displayName = "FilmsSection";
+};
 
 export default FilmsSection;
