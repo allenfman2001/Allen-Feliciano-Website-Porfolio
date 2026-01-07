@@ -84,7 +84,7 @@ const CareerSection = () => {
     logo: ucberkeleySeal
   }, {
     title: "Associate Degrees in Business Administration & Economics",
-    company: "Pasadena City College",
+    company: "Pasadena City College, GPA: 4.0",
     location: "Pasadena, CA",
     period: "2019 - 2020",
     highlights: ["Dual Associate Degrees", "Foundation in Business & Economic Principles"],
