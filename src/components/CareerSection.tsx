@@ -73,13 +73,6 @@ const CareerSection = () => {
     highlights: ["Market Research & Trend Analysis for product strategy", "Product Development lifecycle management", "Cross-functional collaboration on product roadmap"],
     type: "work"
   }, {
-    title: "Database Administrator",
-    company: "Consulate General of the Republic of Indonesia in Los Angeles",
-    location: "Los Angeles, CA (Hybrid)",
-    period: "Nov 2020 - Jan 2021",
-    highlights: ["Managed databases of 500,000+ Indonesian citizens on the US West Coast (including Hawaii and Guam)", "Recovered 80% of data loss spanning 40+ years of citizen records", "Launched Electronic Indonesian ID campaign achieving 90% conversion rate in under 3 weeks"],
-    type: "work"
-  }, {
     title: "Co-Founder & Executive",
     company: "PT MultiMedika International, Tbk",
     location: "Jakarta, Indonesia",
@@ -87,6 +80,13 @@ const CareerSection = () => {
     highlights: ["Raised $7.4M and led company to successful IPO (IDX: MMIX)", "40,000+ retail store placements across Indonesia", "Built top 5 consumer healthcare brand nationwide"],
     type: "work",
     images: [multimedIpo, multimedGopublic]
+  }, {
+    title: "Database Administrator",
+    company: "Consulate General of the Republic of Indonesia in Los Angeles",
+    location: "Los Angeles, CA (Hybrid)",
+    period: "Nov 2020 - Jan 2021",
+    highlights: ["Managed databases of 500,000+ Indonesian citizens on the US West Coast (including Hawaii and Guam)", "Recovered 80% of data loss spanning 40+ years of citizen records", "Launched Electronic Indonesian ID campaign achieving 90% conversion rate in under 3 weeks"],
+    type: "work"
   }];
   const educationItems: CareerItem[] = [{
     title: "Bachelor of Science in Business Administration",
