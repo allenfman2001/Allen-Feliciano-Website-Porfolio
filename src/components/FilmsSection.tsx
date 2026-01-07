@@ -8,6 +8,11 @@ interface FilmItem {
 
 const films: FilmItem[] = [
   {
+    title: "Where the Star Takes Us",
+    period: "December 2025",
+    link: "https://drive.google.com/file/d/1mUWb9QTK1TosNiNioeX6GiHYQZF5ug-L/view?usp=sharing",
+  },
+  {
     title: "How to Pay Off Your Student Debt",
     period: "Spring 2025",
     link: "https://drive.google.com/file/d/1DrUIOb2TmXD9X8X_kCXtemimTs_d4QOv/view?usp=sharing",
